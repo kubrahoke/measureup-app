@@ -53,7 +53,7 @@ if 'unit2_value' not in st.session_state:
     st.session_state.unit2_value = None
 
 # Get folder where this script lives
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(measureup_appV2.py))
 # Paths relative to the repo
 logo_path = os.path.join(BASE_DIR, "logo.jpg")
 excel_path = os.path.join(BASE_DIR, "value_list.xlsx")

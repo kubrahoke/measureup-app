@@ -52,17 +52,21 @@ if 'total_value_by_type' not in st.session_state:
 if 'unit2_value' not in st.session_state:
     st.session_state.unit2_value = None
 
-# Display logo and title
-st.image("/Users/kubratoka/Desktop/MeasureUp App/logo.jpg", width=300)
+# Get folder where this script lives
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Paths relative to the repo
+logo_path = os.path.join(BASE_DIR, "assets", "logo.jpg")
+excel_path = os.path.join(BASE_DIR, "data", "value_list.xlsx")
+
+st.image(logo_path, width=300)
 st.title("MeasureUp Estimator App")
 
-# Load Excel file
-file_path = "/Users/kubratoka/Desktop/MeasureUp App/value_list.xlsx"
 try:
-    df = pd.read_excel(file_path)
+    df = pd.read_excel(excel_path)
 except Exception as e:
     st.error(f"Error loading Excel file: {e}")
     st.stop()
+
 
 # Initialize session state for page navigation
 if 'current_page' not in st.session_state:

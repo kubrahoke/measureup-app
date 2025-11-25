@@ -55,8 +55,8 @@ if 'unit2_value' not in st.session_state:
 # Get folder where this script lives
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Paths relative to the repo
-logo_path = os.path.join(BASE_DIR, "assets", "logo.jpg")
-excel_path = os.path.join(BASE_DIR, "data", "value_list.xlsx")
+logo_path = os.path.join(BASE_DIR, "logo.jpg")
+excel_path = os.path.join(BASE_DIR, "value_list.xlsx")
 
 st.image(logo_path, width=300)
 st.title("MeasureUp Estimator App")

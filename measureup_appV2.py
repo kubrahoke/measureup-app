@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import io
+import os
 
 # Page configuration
 st.set_page_config(page_title="MeasureUp Estimator App", layout="centered")
@@ -53,7 +54,7 @@ if 'unit2_value' not in st.session_state:
     st.session_state.unit2_value = None
 
 # Get folder where this script lives
-BASE_DIR = os.path.dirname(os.path.abspath(measureup_appV2.py))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Paths relative to the repo
 logo_path = os.path.join(BASE_DIR, "logo.jpg")
 excel_path = os.path.join(BASE_DIR, "value_list.xlsx")
